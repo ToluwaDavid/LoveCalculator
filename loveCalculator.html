@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Love Calculator</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body style="background-color: #FD9D9F">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 t text-center">
+				<div style="margin-top: 200px;">
+					<span style="color: #4E0406; font-weight: bold; font-size: 40px;" ><b >D'love Calculator</b></span>
+					<br>
+					<br>
+					<input type="text" name="Fname" id="first" class="form-control" placeholder="Your name">
+					<br>
+					<input type="text" name="Lname" id="last" class="form-control" placeholder="Your Loves name" onkeydown="enableSubmit()">
+					<br>
+					<input type="submit" name="submit" id="sub" value="Test Your Love"  style="border-radius: 8px;" onclick="calculateLove()" disabled>
+					<br>
+					<br>
+					<br>
+					<!-- <button class="btn">Click me</button> -->
+					<div style="color: #4E0406; font-weight: bold; font-size: 40px;">Compatibility Level</div>
+					<div id="show" style="font-weight: bold; font-size: 40px;"></div>
+					<br>
+				</div>
+			</div>
+			
+		
+		</div>
+	</div>
+		<script type="text/javascript">
+		document.getElementById("first").value = f;
+		document.getElementById("last").value = l;
+		function calculateLove()
+		{
+			var n = Math.random();
+			n = n*100;
+			n = Math.floor(n) + 1; 
+			//alert(n);
+			document.getElementById("show").innerHTML = n +'%';
+			document.getElementById("sub").disabled = true;
+		}
+		function enableSubmit(){
+			document.getElementById("sub").disabled = false;
+		}
+		// if ( f = ' ' && l = '') {
+		// 	document.getElementById("sub").disabled = true;
+		// }
+		
+	</script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="bootstrap/js/jquery-3.2.1.js"></script> -->
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- <script src="bootstrap/js/popper.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- <script src="bootstrap/js/bootstrap.js"></script> -->
+</body>
+</html>
